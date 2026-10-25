@@ -1,0 +1,25 @@
+name: Enhancement
+description: Improve an existing app — a new exercise, a clearer example, an upgrade.
+title: "enhancement(<app-name>): <short description>"
+labels: ["enhancement"]
+body:
+  - type: input
+    id: app
+    attributes:
+      label: App folder
+      placeholder: 03-data/flyway-migrations
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What would you change, and why?
+    validations:
+      required: true
+  - type: checkboxes
+    id: scope
+    attributes:
+      label: Scope check
+      options:
+        - label: This stays within the app's "Must teach" scope (otherwise, propose a new project instead).
+          required: true

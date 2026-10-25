@@ -1,0 +1,22 @@
+name: Documentation
+description: Something in a README, the catalog, the learning path, or a guide is wrong or unclear.
+title: "docs: <short description>"
+labels: ["documentation"]
+body:
+  - type: input
+    id: where
+    attributes:
+      label: Which file?
+      placeholder: docs/LEARNING_PATH.md or 02-web/http-clients/README.md
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What is wrong or confusing?
+    validations:
+      required: true
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: Suggested wording or fix

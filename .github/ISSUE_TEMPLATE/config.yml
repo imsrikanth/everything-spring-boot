@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Security vulnerability
+    url: https://github.com/imsrikanth/everything-spring-boot/security/advisories/new
+    about: Report security issues privately — never in a public issue.
+  - name: Projects catalog
+    url: https://github.com/imsrikanth/everything-spring-boot/blob/HEAD/docs/PROJECTS.md
+    about: Check the catalog before proposing or claiming an app.
