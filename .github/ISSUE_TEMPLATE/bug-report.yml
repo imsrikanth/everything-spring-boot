@@ -1,0 +1,43 @@
+name: Bug report
+description: An app does not build, does not run, or behaves differently from its README.
+title: "bug(<app-name>): <short description>"
+labels: ["bug"]
+body:
+  - type: input
+    id: app
+    attributes:
+      label: App folder
+      placeholder: 04-caching/redis-cache
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: The exact commands or README steps you ran.
+      placeholder: |
+        1. docker compose up -d
+        2. ./mvnw spring-boot:run
+        3. curl http://localhost:8080/api/...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected vs actual
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs or error output
+      description: Paste the relevant part. Remove anything sensitive.
+      render: text
+  - type: input
+    id: env
+    attributes:
+      label: Environment
+      description: OS, JDK version (`java -version`), Docker version, IDE.
+      placeholder: Windows 11, Temurin 21.0.5, Docker 27.3, IntelliJ 2026.2
+    validations:
+      required: true

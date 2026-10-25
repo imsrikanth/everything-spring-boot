@@ -1,0 +1,52 @@
+name: Propose a new project
+description: Suggest an app that is not in the projects catalog yet.
+title: "proposal: <app-name>"
+labels: ["proposal"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please check [docs/PROJECTS.md](https://github.com/imsrikanth/everything-spring-boot/blob/HEAD/docs/PROJECTS.md) first — the topic may already be planned or fit inside an existing app.
+  - type: input
+    id: name
+    attributes:
+      label: Proposed folder
+      description: Theme folder plus a kebab-case app name.
+      placeholder: 05-messaging/pulsar-basics
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why it deserves its own app
+      description: What would a learner or developer get from it that no existing app gives them?
+    validations:
+      required: true
+  - type: textarea
+    id: teach
+    attributes:
+      label: Must teach (draft)
+      description: One line listing the concepts the app must cover.
+    validations:
+      required: true
+  - type: dropdown
+    id: level
+    attributes:
+      label: Level
+      options:
+        - 🟢 Beginner
+        - 🟡 Intermediate
+        - 🔴 Advanced
+    validations:
+      required: true
+  - type: input
+    id: infra
+    attributes:
+      label: Infrastructure needed
+      placeholder: None / PostgreSQL / Kafka / ...
+  - type: checkboxes
+    id: build
+    attributes:
+      label: Would you build it?
+      options:
+        - label: Yes, I would like to claim this app if it is accepted.

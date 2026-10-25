@@ -1,0 +1,28 @@
+# Maven
+target/
+!.mvn/wrapper/maven-wrapper.jar
+
+# IDEs
+.idea/
+*.iml
+.vscode/
+.classpath
+.project
+.settings/
+.factorypath
+.sts4-cache/
+bin/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Local secrets and overrides — commit .env.example instead
+.env
+*.local.yml
+application-secret*.yml
+
+# Logs and runtime files
+*.log
+logs/
+uploads/

@@ -1,0 +1,43 @@
+name: Claim a project
+description: Volunteer to build a 📋 Planned app from the projects catalog.
+title: "claim: <app-name>"
+labels: ["claim", "new-app"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for volunteering! Check that the row in [docs/PROJECTS.md](https://github.com/imsrikanth/everything-spring-boot/blob/HEAD/docs/PROJECTS.md) is 📋 Planned with no linked issue.
+        A maintainer will assign this issue to you — please wait for that before starting.
+  - type: input
+    id: app
+    attributes:
+      label: App folder
+      description: Exactly as in the catalog.
+      placeholder: 03-data/jpa-relationships
+    validations:
+      required: true
+  - type: textarea
+    id: plan
+    attributes:
+      label: Your plan
+      description: The small domain you will use, how you will cover the "Must teach" line, and any infra.
+      placeholder: |
+        Domain: authors and books.
+        Covers one-to-many, many-to-many via tags, N+1 demo with logs, fetch join and entity graph fix.
+        Infra: PostgreSQL via compose.yaml; Testcontainers in tests.
+    validations:
+      required: true
+  - type: input
+    id: eta
+    attributes:
+      label: Rough timeline
+      placeholder: About two weeks
+  - type: checkboxes
+    id: ack
+    attributes:
+      label: Acknowledgements
+      options:
+        - label: I have read CONTRIBUTING.md and the quality bar for a ready app.
+          required: true
+        - label: I understand an inactive claim may be released after 30 days.
+          required: true

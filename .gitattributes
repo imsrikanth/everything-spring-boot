@@ -1,0 +1,17 @@
+# Normalize line endings in the repository; check out with native endings.
+* text=auto
+
+# Shell scripts must keep LF or they fail on macOS/Linux (including mvnw).
+*.sh   text eol=lf
+mvnw   text eol=lf
+
+# Windows scripts keep CRLF.
+*.cmd  text eol=crlf
+*.bat  text eol=crlf
+
+# Binaries.
+*.jar  binary
+*.png  binary
+*.jpg  binary
+*.gif  binary
+*.ico  binary
